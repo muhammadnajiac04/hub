@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Task Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('task/10.png'); /* Replace with your image path */
+    background-size: cover; /* Makes the image cover the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+        body::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: drift 20s infinite alternate;
+        }
+
+        @keyframes drift {
+            to {
+                transform: translate(-10%, -10%);
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header h1 {
+            font-size: 3em;
+            color: white;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 25px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .icon {
+            transform: rotateY(360deg);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .card-title {
+            color: white;
+            font-size: 1em;
+            font-weight: 600;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .study-icon {
+            position: relative;
+        }
+
+        .study-icon::before {
+            content: '📚';
+            font-size: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 15px;
+            }
+
+            .card {
+                padding: 20px 15px;
+            }
+        }
+
+        .glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            }
+            to {
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Hub</h1>
+            <p>Your gateway to productivity</p>
+        </div>
+        
+        <div class="grid">
+            <a href="https://chat.openai.com" class="card" target="_blank">
+                <div class="icon">🤖</div>
+                <div class="card-title">ChatGPT</div>
+            </a>
+
+            <a href="https://gemini.google.com" class="card" target="_blank">
+                <div class="icon">✨</div>
+                <div class="card-title">Gemini</div>
+            </a>
+
+            <a href="https://mail.google.com" class="card" target="_blank">
+                <div class="icon">📧</div>
+                <div class="card-title">Gmail</div>
+            </a>
+
+            <a href="https://linkedin.com" class="card" target="_blank">
+                <div class="icon">💼</div>
+                <div class="card-title">LinkedIn</div>
+            </a>
+
+            <a href="https://youtube.com" class="card" target="_blank">
+                <div class="icon">📺</div>
+                <div class="card-title">YouTube</div>
+            </a>
+
+            <a href="https://claude.ai" class="card" target="_blank">
+                <div class="icon">🧠</div>
+                <div class="card-title">Claude AI</div>
+            </a>
+
+            <a href="#study" class="card" onclick="event.preventDefault(); alert('Add your study resources here!');">
+                <div class="icon study-icon"></div>
+                <div class="card-title">Study</div>
+            </a>
+
+            <a href="https://web.whatsapp.com" class="card" target="_blank">
+                <div class="icon">💬</div>
+                <div class="card-title">WhatsApp</div>
+            </a>
+
+            <a href="https://github.com" class="card" target="_blank">
+                <div class="icon">🐙</div>
+                <div class="card-title">GitHub</div>
+            </a>
+
+            <a href="https://supabase.com" class="card" target="_blank">
+                <div class="icon">⚡</div>
+                <div class="card-title">Supabase</div>
+            </a>
+
+            <a href="https://notebooklm.google.com" class="card" target="_blank">
+                <div class="icon">📓</div>
+                <div class="card-title">NotebookLM</div>
+            </a>
+
+            <a href="https://sololearn.com" class="card" target="_blank">
+                <div class="icon">🎓</div>
+                <div class="card-title">SoloLearn</div>
+            </a>
+
+            <a href="https://lovable.dev" class="card" target="_blank">
+                <div class="icon">💖</div>
+                <div class="card-title">Lovable</div>
+            </a>
+
+            <a href="https://coursera.org" class="card" target="_blank">
+                <div class="icon">🎯</div>
+                <div class="card-title">Coursera</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
