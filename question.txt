@@ -1,0 +1,54 @@
+MYSQL
+
+1. Experiment with DDL commands in SQL
+
+2. Experiment with DDL & DML commands in SQL
+
+3. Experiment with other DDL & DML commands in SQL
+
+4. Experiment with DCL & TCL commands in SQL
+
+5. Experiment that retrieves data from database with simple SQL queries
+
+6. Experiment that retrieves data from database using nested SQL queries
+
+7. Experiment that works with string operations in SQL
+
+8. Aggregate functions, GROUP BY and HAVING clauses in SQL
+
+9. Set operations in SQL
+   (UNION, UNION ALL, INTERSECT, EXCEPT)
+
+10. Define a view and perform query selection on it
+
+11. Develop a sample database system and perform data retrieval
+
+
+
+MONGODB
+
+1. Database MyCev – create collections, insertion, display, sorting, deletion, drop collection and database
+
+2. Database Myclass – create collection with student details, insertion, listing, updating
+
+3. Create BOOK and STUDENT collections in LIBRARY database
+
+4. Perform updation, display and sort according to condition given
+
+5. Create USER and BOOK collections in BOOKREVIEW database
+
+6. Perform updation, display and sort according to condition given
+
+7. Create STUDENT and COURSE collections in GRADING database
+
+8. Create EMPLOYEE and PRODUCT collections in MARKETING database
+
+9. Perform updation, display and sort according to condition given
+
+10. Create EMPLOYEE and PROJECT collections in EMPMAPPING database
+
+11. Perform updation, display and sort according to condition given
+
+12. Create MOVIE and ACTOR collections in MVRATING database
+
+13. Perform updation, display and sort according to condition given
