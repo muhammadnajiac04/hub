@@ -1,1 +1,2 @@
 HUB
+easy access
